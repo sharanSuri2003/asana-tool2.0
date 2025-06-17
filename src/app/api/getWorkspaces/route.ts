@@ -1,5 +1,5 @@
 import axios from "axios";
-export async function GET(request: Request, response: Response) {
+export async function GET(request: Request) {
   const pat = request.headers.get("authorization");
   const workspaces = await axios.get(
     "https://app.asana.com/api/1.0/workspaces",

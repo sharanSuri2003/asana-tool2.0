@@ -2,8 +2,7 @@ import axios from "axios";
 
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ workspaceID: string; userID: string }> },
-  response: Response
+  { params }: { params: Promise<{ workspaceID: string; userID: string }> }
 ) {
   const pat = request.headers.get("authorization");
   const url = request.url || (request as any).originalUrl;
